@@ -1,5 +1,3 @@
-import time;
-start = time.time()
 import random;
 teams = ["India","Pakistan","South Africa","Australia","Bangladesh","Sri Lanka","Netherlands","Afghanistan","England","New Zealand"];
 teamsLength = len(teams);
@@ -24,5 +22,3 @@ random.shuffle(output)
 for x in range(0,len(output)):
     result = str(x+1)+" of "+str(len(output))+" Match \n"+output[x][0]+" vs "+output[x][1]+"\n";
     print(result);
-
-print(time.time()-start)
