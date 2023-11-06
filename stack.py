@@ -25,6 +25,12 @@ class Stack:
             curr = curr.next
         return result[:-2]
 
+    def peak(self):
+        if self.top != None:
+            return self.top.data
+        else:
+            return "Stack is empty"
+ 
 S = Stack()
 S.push(1)
 S.push(2)
@@ -33,3 +39,4 @@ S.push(4)
 print(S.transverse())
 S.pop()
 print(S.transverse())
+print(S.peak())
