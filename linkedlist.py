@@ -127,7 +127,6 @@ class LinkedList:
                 return
             curr = curr.next
             pos = pos + 1
-        print('Index Array')
         return 
 
 
