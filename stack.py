@@ -8,7 +8,10 @@ class Stack:
         self.top = None
         self.n = 0
     def isEmpty(self):
-        return self.top == None
+        if self.top == None:
+            return True
+        else:
+            return False
     def push(self,value):
         new_node = Node(value)
         new_node.next = self.top
@@ -31,12 +34,26 @@ class Stack:
         else:
             return "Stack is empty"
  
-S = Stack()
-S.push(1)
-S.push(2)
-S.push(3)
-S.push(4)
-print(S.transverse())
-S.pop()
-print(S.transverse())
-print(S.peak())
+# S = Stack()
+# S.push(1)
+# S.push(2)
+# S.push(3)
+# S.push(4)
+# print(S.transverse())
+# S.pop()
+# print(S.transverse())
+# print(S.peak())
+
+def reverse_string(text):
+    s = Stack()
+
+    for i in text:
+        s.push(i)
+
+    res = ""
+    while(not s.isEmpty()):
+        res = res + s.pop()
+
+    print(res)
+
+reverse_string("Hello")
